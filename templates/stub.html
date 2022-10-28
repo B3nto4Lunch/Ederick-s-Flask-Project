@@ -1,18 +1,66 @@
-<!-- Extending the predefined project layout -->
-{% extends "layouts/base.html" %}
+<div class="container">
+    <h1>Edit Profile</h1>
+    <p>
+      On this page you can customize your profile. Please remember any changes can take up to 2 hours to update publicly.
+    </p>
+    <label for="username">Username</label>
+    <input type="text" name="username" id="username" value="dcode71" autofocus data-autosave-url="http://localhost:3000/save-profile">
+    <label for="biography">Your Bio</label>
+    <textarea name="biography" id="biography" data-autosave-url="http://localhost:3000/save-profile">I make web development videos on YouTube, and I think pure JavaScript is the best way to learn.</textarea>
+    <div class="autosave-message">All changes saved</div>
+  </div>
 
-<!- This variable sets name of browser tab  -->
-{% set project = "Stubby" %}
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const fd = new FormData(form);
+    const obj = Object.fromEntries(fd)
+    console.log(obj); 
 
-<!- This is a replacement block for Body in base.html -->
-{% block body %}
-    <!- Try building a new body here, bootstrap is a wise choice ->
-    <div class="px-5 py-5 mx-auto">
-        <h1 class="text-primary"><strong>Stubby Body</strong></h1>
-        <p class="text-secondary">Ederick Wong</p>
-    </div>
-{% endblock %}
+    JSON.stringify(obj);
+    localStorage.setItem('form', json);
 
-<!- This is turning off birds background from base.html -->
-{% block background %}
-{% endblock %}
+    window.location.href = "confirm.html";
+    
+    })
+
+
+
+
+
+    
+   form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const fd = new FormData(form);
+    const obj = Object.fromEntries(fd)
+    console.log(obj); 
+
+    JSON.stringify(obj);
+    localStorage.setItem('form', json);
+
+    
+    }) 
+
+
+ var dict = [];
+
+dict1["Event"]=prompt("What event do you want to schedule? ");
+dict2["Date"]=input
+
+
+  Name = "Event"
+  Date = "Etc"
+
+dict[key] = value
+dict.key = new_value; 
+var value = dict.key;
+delete dict.key;
+
+  let saveButton = [];
+    const addEvent = (ev)=>{
+      ev.preventDefault();
+      let Event = {
+        date: 
+        title:
+       }
+    }  
+
